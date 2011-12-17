@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:background="#3cbdff" android:weightSum="1" android:gravity="center">
+    <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_width="193dp" android:layout_weight="0.41" android:textColor="#000" android:textSize="45pt" android:text="8" android:id="@+id/card_display"></TextView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:orientation="vertical" android:layout_weight="0.17" android:gravity="bottom|fill_horizontal">
+        <Button android:gravity="center" android:layout_height="wrap_content" android:id="@+id/card_close" android:layout_width="match_parent" android:text="Close"></Button>
+    </LinearLayout>
+    
+</LinearLayout>
