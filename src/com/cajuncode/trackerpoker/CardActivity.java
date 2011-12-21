@@ -1,14 +1,22 @@
 package com.cajuncode.trackerpoker;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 import android.app.Activity;
+import android.content.res.AssetManager;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Button;
 public class CardActivity extends Activity {
+	private static final String TAG = "Tracker Poker Card Activity";
 	private Dealer dealer = Dealer.getInstance();
-	private TextView display ;
+	private ImageView display ;
 	private Button closeCard;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -16,8 +24,20 @@ public class CardActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.card);
 		
-		display = (TextView) findViewById(R.id.card_display);
-		display.setText(dealer.getVote());
+		display = (ImageView) findViewById(R.id.card_image);
+		AssetManager assets = getAssets(); 
+		InputStream stream; 
+		try
+		{
+			stream = assets.open( dealer.getVote().toLowerCase() + ".png");
+			Drawable card = Drawable.createFromStream(stream, dealer.getVote());
+			
+			display.setImageDrawable(card);
+			display.setOnClickListener(backButtonListener);
+		}
+		catch (IOException e) {
+			Log.e(TAG, "Error loading " + dealer.getVote(), e);
+		} 
 		
 		closeCard = (Button)findViewById(R.id.card_close);
 		closeCard.setOnClickListener(backButtonListener);

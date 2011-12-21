@@ -3,10 +3,10 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:orientation="vertical"
   android:layout_width="match_parent"
-  android:layout_height="match_parent" android:background="#3cbdff" android:weightSum="1" android:gravity="center">
-    <TextView android:gravity="center" android:layout_height="wrap_content" android:layout_width="193dp" android:layout_weight="0.41" android:textColor="#000" android:textSize="45pt" android:text="8" android:id="@+id/card_display"></TextView>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:orientation="vertical" android:layout_weight="0.17" android:gravity="bottom|fill_horizontal">
-        <Button android:gravity="center" android:layout_height="wrap_content" android:id="@+id/card_close" android:layout_width="match_parent" android:text="Close"></Button>
+  android:layout_height="match_parent" android:weightSum="1" android:gravity="center" android:background="#000000">
+    <LinearLayout android:gravity="bottom|fill_horizontal" android:layout_width="match_parent" android:orientation="vertical" android:id="@+id/linearLayout1" android:layout_height="wrap_content">
+        <Button android:gravity="center" android:text="Close" android:layout_width="match_parent" android:id="@+id/card_close" android:layout_height="wrap_content"></Button>
     </LinearLayout>
+    <ImageView android:id="@+id/card_image" android:layout_height="match_parent" android:layout_width="match_parent"></ImageView>
     
 </LinearLayout>

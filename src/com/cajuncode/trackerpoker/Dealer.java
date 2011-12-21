@@ -49,5 +49,7 @@ public class Dealer {
 	public void setToken(String token) {
 		this.token = token;
 	}
-	
+	public boolean isAuthenicated(){
+		return token == null;
+	}
 }

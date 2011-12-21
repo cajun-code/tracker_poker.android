@@ -28,10 +28,10 @@ public final class R {
         public static final int button7=0x7f06000e;
         public static final int button8=0x7f06000f;
         public static final int button9=0x7f060010;
-        public static final int card_close=0x7f060002;
-        public static final int card_display=0x7f060000;
+        public static final int card_close=0x7f060001;
+        public static final int card_image=0x7f060002;
         public static final int join_room=0x7f060017;
-        public static final int linearLayout1=0x7f060001;
+        public static final int linearLayout1=0x7f060000;
         public static final int tableLayout1=0x7f060004;
         public static final int tableRow1=0x7f060005;
         public static final int tableRow2=0x7f060009;
