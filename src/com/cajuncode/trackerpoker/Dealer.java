@@ -50,6 +50,9 @@ public class Dealer {
 		this.token = token;
 	}
 	public boolean isAuthenicated(){
-		return token == null;
+		return token != null;
+	}
+	public boolean isInRoom(){
+		return room != null;
 	}
 }

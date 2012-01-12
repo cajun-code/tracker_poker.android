@@ -1,4 +1,4 @@
 bin
 *.apk
 *.class
-
+.DS_Store
