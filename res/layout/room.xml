@@ -5,7 +5,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent">
     <TextView android:text="Enter Room Number:" android:id="@+id/textView1" android:layout_height="wrap_content" android:layout_width="match_parent"></TextView>
-    <EditText android:layout_height="wrap_content" android:id="@+id/editText1" android:layout_width="match_parent">
+    <EditText android:layout_height="wrap_content" android:id="@+id/room_no" android:layout_width="match_parent">
         <requestFocus></requestFocus>
     </EditText>
     <Button android:layout_height="wrap_content" android:id="@+id/scan" android:text="Scan Barcode" android:layout_width="match_parent"></Button>

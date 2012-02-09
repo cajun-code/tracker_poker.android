@@ -11,17 +11,18 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Button;
 public class CardActivity extends Activity {
 	private static final String TAG = "Tracker Poker Card Activity";
-	private Dealer dealer = Dealer.getInstance();
+	private Dealer dealer;
 	private ImageView display ;
 	private Button closeCard;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		dealer = ((TrackerPokerApp)getApplication()).getDealer();
 		setContentView(R.layout.card);
 		
 		display = (ImageView) findViewById(R.id.card_image);
